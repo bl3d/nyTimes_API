@@ -1,7 +1,3 @@
-(function() {
-  'use strict'; 
-
-
 //Input from user
 
 var searchTerm = '';
@@ -9,7 +5,7 @@ var beginDate = 0;
 var endDate = 0;
 var numResults = 0;
 
-function search(){
+function search(searchTerm, beginDate, endDate, numResults){
 
 
 
@@ -32,7 +28,3 @@ $.ajax({
 });
 
 }
-
- 
-
-}()); 
