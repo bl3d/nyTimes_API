@@ -4,15 +4,21 @@
 
 //Input from user
 
-var searchTerm = 
+var searchTerm = '';
+var beginDate = 0;
+var endDate = 0;
+var numResults = 0;
+
+function search(){
+
 
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 url += '?' + $.param({
   'api-key': "d20e3e965a6e439187a9e32695566dfc",
-  'q': "soccer",
-  'begin_date': "20170304",
-  'end_date': "20170304"
+  'q': searchTerm,
+  'begin_date': beginDate,
+  'end_date': endDate
 });
 $.ajax({
   url: url,
@@ -24,6 +30,8 @@ $.ajax({
 
    console.log(result);
 });
+
+}
 
  
 
